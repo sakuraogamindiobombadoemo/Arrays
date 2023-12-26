@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 83 - Arrays</title>
+    </head>
+    <body>
+        <p>
+            Como declarar os Arrays?
+            <h4 id="declarationOfArrays">
+            </h4>
+        </p>
+        <hr>
+        <p>
+            Como buscar o primeiro elemento do Array?
+            <h4 id="aFE"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como buscar o segundo elemento do Array?
+            <h4 id="aSE"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como buscar o terceiro elemento do Array?
+            <h4 id="aTE"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como obter o comprimento do Array?
+            <h4 id="displayLengthOfArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como utilizar o loop atraves do Array?
+            <h4 id="loopTheArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como adicionar elemento ao final do Array?
+            <h4 id="addElementATE0A"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como adicionar mais elementos ao final do Array?
+            <h4 id="addMoreElementATE0A"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como declarar o Array com letras do alfabeto?
+            <h4 id="displayAlphabetsArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como organizar o Array com o alfabeto?
+            <h4 id="displaySortedAlphabetsArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como inverter o Array com o alfabeto?
+            <h4 id="displayReverseArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como declarar o Array com numeros?
+            <h4 id="displayNumberArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como encontrar o numero maximo de um Array?
+            <h4 id="displayMaxNumbersArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como encontrar o numero minimo de um Array?
+            <h4 id="displayMinNumbersArray"></h4>
+        </p>
+        <hr>
+
+        
+        <p>
+            Como adicionar elemento no inicio do Array?
+            <h4 id="addElementATS0A"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como adicionar mais elementos no inicio do Array?
+            <h4 id="addMoreElementATS0A"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como remover elementos no inicio do Array?
+            <h4 id="removeElementFromStartOfArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como remover elementos no final do Array?
+            <h4 id="removeElementAEOfArray"></h4>
+        </p>
+        <hr>
+
+        <p>
+            Como mesclar dois Arrays?
+            <h4 id="mergeTwoArrays"></h4>
+        </p>
+        <hr>
+</body>
+        <script>
+            var fruits = ["maçã", "Laranja", "manga" ];
+            console.log(fruits);
+            document.getElementById("declarationOfArrays").innerHTML = fruits;
+
+            var firstFruits = fruits [0];
+            console.log(firstFruits);
+            document.getElementById("aFE").innerHTML = firstFruits;
+
+            var secondFruits = fruits [1];
+            console.log(secondFruits);
+            document.getElementById("aSE").innerHTML = secondFruits;
+
+            var thirdFruits = fruits [2];
+            console.log(thirdFruits);
+            document.getElementById("aTE").innerHTML = thirdFruits;
+
+            var lengthOfTheArray = fruits.length;
+            console.log();
+            document.getElementById("displayLengthOfArray").innerHTML = lengthOfTheArray;
+
+            var arrayValue = "";
+            for (i = 0; i < fruits.length; i++){
+                console.log(fruits[i]);
+                arrayValue = arrayValue +fruits[1] + "<br>";
+            }
+            document.getElementById("loopTheArray").innerHTML = arrayValue;
+            
+            fruits.push("limão");
+            console.log(fruits);
+            document.getElementById("addElementATE0A").innerHTML = fruits;
+
+            fruits.push("cereja");
+            console.log(fruits);
+            document.getElementById("addMoreElementATE0A").innerHTML = fruits;
+
+            var alphabets = ["l", "a", "e", "j", "b", "g", "f", "h", "c", "d", "i", "k"];
+            console.log(alphabets);
+            document.getElementById("displayAlphabetsArray").innerHTML = alphabets ;
+
+            alphabets.sort();
+            console.log(alphabets);
+            document.getElementById("displaySortedAlphabetsArray").innerHTML = alphabets;
+
+            alphabets.reverse();
+            console.log(alphabets);
+            document.getElementById("displayReverseArray").innerHTML = alphabets;
+
+            var numbers = ["45", "4", "9", "16", "25"];
+            console.log(numbers);
+            document.getElementById("displayNumberArray").innerHTML = numbers;
+
+            var maximumNumber = Math.max.apply(Math, numbers);
+            console.log(maximumNumber);
+            document.getElementById("displayMaxNumbersArray").innerHTML = maximumNumber;
+
+            var minimumNumber = Math.min.apply(Math, numbers);
+            console.log(minimumNumber);
+            document.getElementById("displayMinNumbersArray").innerHTML = minimumNumber;
+
+            fruits.unshift("Melancia");
+            console.log(fruits);
+            document.getElementById("addElementATS0A").innerHTML = fruits;
+
+            fruits.unshift("Morango");
+            console.log(fruits);
+            document.getElementById("addMoreElementATS0A").innerHTML = fruits;
+
+            fruits.shift();
+            console.log(fruits);
+            document.getElementById("removeElementFromStartOfArray").innerHTML = fruits;
+
+            fruits.pop();
+            console.log(fruits);
+            document.getElementById("removeElementAEOfArray").innerHTML = fruits;
+
+            var second_countries = ["Brasil", "Argentina", "Uruguai", "Paraguai", "Chile", "Peru"];
+            var first_countries = ["Inglaterr", "França", "Italia", "Espanha", "Holanda", "Suécia"];
+            
+            var all_countries = first_countries.concat(second_countries);
+            console.log(all_countries);
+            document.getElementById("mergeTwoArrays").innerHTML = all_countries;
+        </script>
+</html>
